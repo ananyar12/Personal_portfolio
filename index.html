@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/578ffcca4c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.webp">
+            <ul id="sidemenu">
+            
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#projects">PROJECT</a></li>
+                <li><a href="#certificate">CERTIFICATE</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+
+        </nav> 
+        
+   
+    <div class="header-text">
+        <h3>Hello This is <b style="color: #ef94b1;">ANANYA </h3><br>
+            
+
+            <h1>Wellcome to my <b style="color: #ef94b1;">Portfolio </h1>
+                
+        </div>   
+    </div>
+   </div>
+
+<!--------------ABOUT-------------->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/01.jpg" >
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Computer Science Graduate - 2023 <br>
+                     To seek a challenging career<br>Passionate about solving complex problems through <br> innovative technology solutions.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
+                    <!-- <p class="tab-links"onclick="opentab('Project')">Project</p> -->
+            
+                    <p class="tab-links "onclick="opentab('Internship')">Internship</p>
+                </div>
+                <div class="tab-contents active-tab" id="Education">
+                    <ul>
+                        <li><span>2023</span><br>University BDT College of Engineering -Davangere <br>CS&E</li>
+                        <li><span>2019</span><br>ST PaulsPU College-Davanagere </li>
+                        <li><span>2017</span><br>R V Public  High School- davanagere</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Internship">
+                    <h1><b style="color: #ea86a5;"> SmartKnower </b></h1>
+                    <p>Completed One month Internship on Web Devlopment (Frontend) workd with tools such as javascript;HTML-CSS;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   </div>
+   <!-- -----------------Skills-------------- -->
+
+   <div id="skills">
+        <div class="container">
+            <h1 class="sub-title font1" >My Skills</h1>
+            <div class="skills-list">
+                <div>
+                    <img width="144" height="144" src="https://img.icons8.com/color/144/000000/java-coffee-cup-logo--v1.png" alt="java-coffee-cup-logo--v1"/>
+                    <h2>Core Java</h2>
+                    <p> OOPS Concepts <br> Exception handling & Multithreading </p>
+                    
+                </div>
+                <div>
+                    <img width="144" height="144" src="https://img.icons8.com/color/96/000000/code.png" alt="code"/>
+                    <h2>Web Development</h2>
+                    <p>HTML <br> CSS <br> Java Script</p>
+                </div>
+                <div>
+                    <img width="140" height="140" src="https://www.mysql.com/common/logos/includes-mysql-167x86-wob.png" alt=" " >
+                    <h2>SQL</h2>
+                    <p>Oparators <br>
+                    Functions<br>
+                Claues</p>
+                </div>
+            </div>
+        </div>
+   </div>
+   
+
+<!-- ------------------PROJECTS----------------- -->
+
+   <div id="projects">
+        <div class="container">
+            <h1 class="sub-title font1">About My Projects</h1>
+            <div class="projects-list">
+                <div class="projects">
+                    <img src="images/dbms.jpg">
+                    <div class="layer">
+                        <h3>Database manageent system project</h3>
+                        <p>Bike showroom management using mysql,html-css & php</p>
+                        <a href="#"><i
+                            class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="projects">
+                    <img src="images/ecom.webp">
+                    <div class="layer">
+                        <h3>E-commerce project </h3>
+                        <p>Simple e commerce website using html-css & javascript</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="projects">
+                    <img src="images/ml1.jpg">
+                    <div class="layer">
+                        <h3>Machine learning project</h3>
+                        <p>Crop fertilizer recomendation project using decision tree algorethm</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/ananyar12/git_test/projects?query=is%3Aopen" class="btn">See more</a>
+        </div>
+   </div>
+
+   <!--------------certificate-------------->
+
+ <div id="certificate">
+    <div class="container">
+        
+        <h1 class="sub-title font1"> My Certificate </h1>
+
+        
+        <div class="slider-container">
+            
+            <div class="slider">
+                <img src="images/cer1.png" alt="Image 1">
+                <img src="images/cer3.png" alt="Image 2">
+                <img src="images/cer2.png" alt="Image 3">
+                <img src="images/ethical.png" alt="Image 4">
+            </div>
+            <button class="prev-button" onclick="prevSlide()">&#10094;</button>
+            <button class="next-button" onclick="nextSlide()">&#10095;</button>
+        </div>
+    
+        <script>
+            let slideIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slider img');
+    if (index < 0) {
+        slideIndex = slides.length - 1;
+    } else if (index >= slides.length) {
+        slideIndex = 0;
+    }
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+    }
+    slides[slideIndex].style.display = 'block';
+}
+
+function prevSlide() {
+    slideIndex--;
+    showSlide(slideIndex);
+}
+
+function nextSlide() {
+    slideIndex++;
+    showSlide(slideIndex);
+}
+
+showSlide(slideIndex);
+        </script>
+   </div>
+</div>
+
+
+
+
+
+<!-- -------------------CONTACT-------------------- -->
+
+<div>
+    <pre>
+
+
+
+
+
+
+    </pre>
+</div>
+
+
+<div id="contact">
+    <div class="container">
+        <h1 class="sub-title font1">Contact Me</h1>
+        <div class="row">
+            <div class="contact-left">
+                
+                <p><a href="mailto:ananyar0168@gmail.com"><i class="fa-solid fa-envelope" ></i>ananyar0168@mail.com</a> </p>
+                <p><a href="tel:8073600794"><i class="fa-solid fa-phone" ></i>8073600794</a> </p>
+            
+                <div class="social-icons">
+                    <a href="https://github.com/ananyar12/git_test"><i class="fa-brands fa-github" ></i></a>
+                    
+                    <a href="https://www.linkedin.com/public-profile/settings"><i class="fa-brands fa-linkedin" ></i></a>
+                </div>
+                <a href="images/Resume.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    
+                    <textarea name="Message" rows="4" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn3">Submit</button>
+                </form>
+                <span id="msg"></span>
+
+                
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<script>
+
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+ var sidemenu =document.getElementById("sidemenu");
+ function openmenu(){
+    sidemenu.style.right = "0";
+ }
+ function closemenu(){
+    sidemenu.style.right = "-200px";
+ }
+
+</script>
+
+<script>
+ const scriptURL = 'https://script.google.com/macros/s/AKfycbwfiKk0C31XV_UMMClYym9tX3z1sheoY38ATtEDCL6blsDG78vS2yHjzAt5NNvUkO-CoA/exec'
+ const form = document.forms['submit-to-google-sheet']
+ const msg = document.getElementById("msg")
+
+ form.addEventListener('submit', e => {
+   e.preventDefault()
+   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+     .then(response => {
+         msg.innerHTML = "Message sent succesfully"
+         setTimeout(function(){
+             msg.innerHTML = ""
+         },5000) 
+         form.reset()
+     })
+     .catch(error => console.error('Error!', error.message))
+ })
+</script>
+   
+</body>
+</html>
